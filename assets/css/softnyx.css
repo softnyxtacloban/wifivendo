@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: transparent;
+
+}
+
+body,
+html {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/softnyx.webp');
+    /* path to your SVG */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Ensures it fills the container */
+    background-position: center center;
+    background-attachment: fixed;
+    /* Optional: scroll effect */
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+.wrapper {
+    background: linear-gradient(to bottom, #000000, #808080);
+    /* Black to Gray gradient */
+}
+
+.center-content {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #000000;
+    padding: auto;
+    background: transparent;
+    /* Set background to transparent */
+
+}
+
+.center-content h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background: #ffffff;
+    background: transparent;
+}
+
+.center-content p {
+    font-size: 1rem;
+    background: #ffffff;
+    color: #000000;
+}
+
+.main-container {
+    width: 320px;
+    background: #ffffff;
+}
+
+.main-spacer {
+    height: 12px;
+}
+
+.spacer-bottom {
+    margin-bottom: 15px;
+}
+
+.main-spacer1 {
+    height: 20px;
+}
+
+#insertBtn {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14x;
+    color: #ffffff;
+    background: #1706d9;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+}
+
+#promoBtn {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    background: #CB0000;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+}
+
+#loginBtn {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    background: #00ff11;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+}
+
+#connectBtn {
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    background: #151515;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+}
+
+#status-bar {
+    position: absolute;
+    top: 34%;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #1a1a1a;
+    color: rgb(255, 0, 0);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: flashStatus 1s infinite, wiggle 0.5s ease-in-out infinite;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    /* Adds shadow to the text */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Adds shadow to the background */
+}
+
+#status-bar-connected {
+    position: absolute;
+    top: 41%;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: rgb(251, 255, 0);
+    color: rgb(38, 0, 255);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: flashStatus 1s infinite, wiggle 0.5s ease-in-out infinite;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    /* Adds shadow to the text */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Adds shadow to the background */
+}
+
+/* Flash animation */
+@keyframes flashStatus {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Wiggle animation */
+@keyframes wiggle {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    /* Horizontal alignment */
+    align-items: center;
+    /* Vertical alignment */
+    height: 100vh;
+    /* Full viewport height */
+    gap: 1rem;
+    /* Space between spinners */
+    background-color: #f8f9fa;
+    /* Optional: background */
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    /* Horizontal alignment */
+    align-items: center;
+    /* Vertical alignment */
+    height: 100vh;
+    /* Full viewport height */
+    gap: 1rem;
+    /* Space between spinners */
+
+    background-image: url('../images/softnyx.webp');
+    /* path to your SVG */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Ensures it fills the container */
+    background-position: center center;
+    background-attachment: fixed;
+    /* Optional: background */
+}
+
+.spinner-grow {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: currentColor;
+    opacity: 0;
+    animation: spinner-grow 0.75s linear infinite;
+}
+
+.text-primary {
+    color: #0d6efd;
+}
+
+.text-secondary {
+    color: #6c757d;
+}
+
+.text-success {
+    color: #198754;
+}
+
+.text-danger {
+    color: #dc3545;
+}
+
+.text-warning {
+    color: #ffc107;
+}
+
+.text-info {
+    color: #0dcaf0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
